@@ -25,7 +25,7 @@ A fullstack ToDo application with a React + Material UI (MUI) frontend and a Nod
 
 #### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/eczdell/proshore-todo-app
 cd todo-app
 ```
 
@@ -84,3 +84,10 @@ todo-app/
 
 ## License
 MIT 
+
+## Diagrams
+
+- **Database ER Diagram:** [docs/db-er-diagram.puml](backend/docs/db-er-diagram.puml)
+- **Project Sequence Diagram:** [docs/project-sequence-diagram.puml](backend/docs/project-sequence-diagram.puml)
+
+You can visualize these diagrams using any PlantUML-compatible tool or online viewer. 

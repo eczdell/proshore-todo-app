@@ -1,0 +1,9 @@
+@startuml
+entity "Todo" as Todo {
+  * _id : ObjectId
+  * name : string
+  * shortDescription : string
+  * dateTime : datetime
+  * done : boolean
+}
+@enduml 

@@ -1,0 +1,13 @@
+@startuml
+actor User
+participant "Frontend (React)" as FE
+participant "Backend (Express API)" as BE
+participant "MongoDB" as DB
+
+User -> FE : Interact (Add/Edit/Delete/List Todo)
+FE -> BE : HTTP Request (CRUD /api/todos)
+BE -> DB : Query/Update (Mongoose)
+DB --> BE : Result
+BE --> FE : JSON Response
+FE --> User : Update UI
+@enduml 
