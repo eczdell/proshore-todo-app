@@ -8,7 +8,7 @@ export type Todo = {
   done?: boolean;
 };
 
-export type Filter = 'all' | 'done' | 'upcoming';
+export type Filter = 'all' | 'done';
 
 interface TodoContextType {
   todos: Todo[];

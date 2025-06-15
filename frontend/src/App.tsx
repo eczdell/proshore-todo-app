@@ -21,8 +21,8 @@ const App: React.FC = () => {
   return (
     <TodoProvider>
       <CssBaseline />
-      <Container maxWidth="md" sx={{ py: 6 }}>
-        <Paper elevation={6} sx={{ p: 4 }}>
+      <Container maxWidth="md" >
+        <Paper elevation={0} sx={{ p: 4 }}>
           <Box display="flex" flexDirection="column" alignItems="center" gap={2}>
             <Typography variant="h3" component="h1" color="primary" fontWeight={700} gutterBottom>
               ToDo App

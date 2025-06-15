@@ -79,7 +79,6 @@ const TodoList = () => {
         >
           <ToggleButton value="all">All</ToggleButton>
           <ToggleButton value="done">Done</ToggleButton>
-          <ToggleButton value="upcoming">Upcoming</ToggleButton>
         </ToggleButtonGroup>
       </Box>
       <TableContainer component={Paper} sx={{ border: 1, borderColor: 'divider', borderRadius: 2 }}>
