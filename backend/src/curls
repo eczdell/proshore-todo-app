@@ -1,0 +1,19 @@
+curl -X POST http://localhost:5000/api/todos \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Test Todo",
+    "shortDescription": "This is a test todo",
+    "dateTime": "2024-06-01T12:00:00.000Z"
+  }'
+
+curl http://localhost:5000/api/todos
+
+
+curl -X PUT http://localhost:5000/api/todos/$1 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Updated Todo",
+    "done": true
+  }'
+
+curl -X DELETE http://localhost:5000/api/todos/$1

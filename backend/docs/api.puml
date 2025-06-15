@@ -1,0 +1,14 @@
+@startuml
+!define RECTANGLE class
+RECTANGLE "Client" as client
+RECTANGLE "Express API" as api
+RECTANGLE "MongoDB" as db
+
+client --> api : HTTP (CRUD)
+api --> db : Mongoose ODM
+
+api : POST /api/todos
+api : GET /api/todos?filter=done|upcoming
+api : PUT /api/todos/{id}
+api : DELETE /api/todos/{id}
+@enduml 

@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  title: ToDo API
+  version: 1.0.0
+  description: API documentation for the ToDo app
+servers:
+  - url: http://localhost:4000
+paths:
+  /api/todos:
+    get:
+      summary: List all todos (filterable)
+      parameters:
+        - in: query
+          name: filter
+          schema:
+            type: string
+            enum: [done, upcoming]
+          description: Filter by done or upcoming
+      responses:
+        '200':
+          description: List of todos
+    post:
+      summary: Add a new todo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Todo'
+      responses:
+        '201':
+          description: Created
+  /api/todos/{id}:
+    put:
+      summary: Update a todo
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Todo'
+      responses:
+        '200':
+          description: Updated
+    delete:
+      summary: Delete a todo
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Deleted
+components:
+  schemas:
+    Todo:
+      type: object
+      required:
+        - name
+        - shortDescription
+        - dateTime
+      properties:
+        name:
+          type: string
+        shortDescription:
+          type: string
+        dateTime:
+          type: string
+          format: date-time
+        done:
+          type: boolean 
